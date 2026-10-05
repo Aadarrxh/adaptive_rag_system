@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ask Question</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="card">
+        <h2>Ask a Question</h2>
+        
+        <form action="/getAnswer" method="POST">
+            <input 
+                type="text" 
+                name="question" 
+                placeholder="Where does photosynthesis take place?" 
+                required 
+            />
+            <button type="submit">Search</button>
+        </form>
+
+        <% if (locals.answer) { %>
+            <div class="result">
+                <h3>Answer:</h3>
+                <p><%= answer %></p>
+            </div>
+        <% } %>
+    </div>
+</body>
+</html>
