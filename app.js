@@ -1,5 +1,7 @@
 import express from "express";
 
+const app=express();
+
 import path from "path";
 import { fileURLToPath } from "url";
 
@@ -20,8 +22,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended:true }));
 
 dotenv.config();
-
-const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use(express.json());
